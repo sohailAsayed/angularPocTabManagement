@@ -4,7 +4,7 @@
     <mat-tab-group (selectedTabChange)="changePage($event)">
 
         <mat-tab *ngFor="let tab of tabs; let i = index">
-            <ng-template mat-tab-label>{{dynamicLabel[tab?.name]}}</ng-template>
+            <ng-template mat-tab-label>{{tab?.name}}</ng-template>
             <ng-template matTabContent>
                 <ng-template dynamicComponent [component]="tab.component"
                     [loadComponent]="loadComponentServcie"></ng-template></ng-template>
